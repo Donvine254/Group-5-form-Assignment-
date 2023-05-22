@@ -26,8 +26,9 @@ const Form = ({handleForm}) => {
   return (
     <form id="form" onSubmit={handleSubmit}>
       <h2>Review This Product</h2>
+      <label htmlFor="rating">Rating</label>
+      <ReviewStars name="rating" onClick={handleRatingChange}/>
       <label htmlFor="email">Name</label>
-      <ReviewStars onChange={handleRatingChange}/>
       <input type="text" id="name" placeholder='Enter Your Name' required value={name} onChange={handleNameChange}/>
       <br />
       <br />
