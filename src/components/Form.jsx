@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
-import ReviewStars from './ReviewStars';
+import ReviewStars,{starIcons} from './ReviewStars';
+
 const Form = ({handleForm}) => {
   const [name, setName] = useState('');
   const [review, setReview] = useState('');
-  const [rating, setRating] = useState(0)
+  const [rating, setRating] = useState({starIcons})
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -27,7 +28,7 @@ const Form = ({handleForm}) => {
     <form id="form" onSubmit={handleSubmit}>
       <h2>Review This Product</h2>
       <label htmlFor="rating">Rating</label>
-      <ReviewStars name="rating" onClick={handleRatingChange}/>
+      <ReviewStars name="rating" onChange={handleRatingChange}/>
       <label htmlFor="email">Name</label>
       <input type="text" id="name" placeholder='Enter Your Name' required value={name} onChange={handleNameChange}/>
       <br />

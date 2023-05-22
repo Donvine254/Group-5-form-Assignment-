@@ -10,7 +10,8 @@ export const starIcons = [
   
 
 const ReviewStars = () => {
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState({starIcons});
+
 
   const handleStarClick = (selectedRating) => {
     setRating(selectedRating);

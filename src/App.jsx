@@ -15,12 +15,13 @@ function App() {
   const title="Simon Carter Green Shirt"
   const image="https://imagescdn.simoncarter.in/img/app/product/4/404834-2469768.jpg"
   const description="The Simon Carter Green Shirt is a stylish and versatile wardrobe staple that effortlessly combines classic design with contemporary flair. Made with high-quality materials and meticulous craftsmanship, this shirt exudes sophistication and refinement"
-  
+
   const handleForm = (formData) => {
     const newId = reviews.length + 1;
     const newReview = { id: newId, ...formData };
     setReviews([...reviews, newReview]);
     setRatings(prevRatings=>prevRatings+1)
+    console.log (formData);
   };
   
   return (
